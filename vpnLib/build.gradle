@@ -38,11 +38,14 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components["default"] // ← fixed here
                 groupId = 'com.github.pharidali'
                 artifactId = 'openvpn_library'
-                version = 'v1.0.2'
+                version = 'v1.0.3'
+
+                // Use output AAR file directly
+                artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
             }
         }
     }
 }
+
