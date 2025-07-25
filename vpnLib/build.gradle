@@ -33,16 +33,15 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
 
-// 💡 This tells JitPack how to publish it
+// ✅ JitPack-compatible publishing block
 afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
-
+                from components["default"] // ← fixed here
                 groupId = 'com.github.pharidali'
                 artifactId = 'openvpn_library'
-                version = 'v1.0.1'
+                version = 'v1.0.2'
             }
         }
     }
