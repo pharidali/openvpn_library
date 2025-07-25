@@ -42,7 +42,7 @@ afterEvaluate {
 
                 groupId = 'com.github.pharidali'
                 artifactId = 'openvpn_library'
-                version = 'v1.0.0'
+                version = 'v1.0.1'
             }
         }
     }
